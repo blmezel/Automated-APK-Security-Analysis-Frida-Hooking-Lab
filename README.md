@@ -1,7 +1,5 @@
 <div align="center">
   <img width="320" height="320" alt="istinye-universitesi-logo-png_seeklogo-610039" src="https://github.com/user-attachments/assets/da681d83-2f61-4daf-be78-c01abe656e88" />
-<div align="center">
-  <img width="320" height="320" alt="istinye-universitesi-logo-png_seeklogo-610039" src="https://github.com/user-attachments/assets/da681d83-2f61-4daf-be78-c01abe656e88" />
 
 # 🛡️ Automated APK Security Analysis & Frida Hooking Lab
 
