@@ -1,0 +1,17 @@
+# Environment / Ortam
+.env
+*.env.local
+
+# Dependencies / Bağımlılıklar
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Decompiler and Analysis Tools Output
+jadx-output/
+reports/*.json
+reports/*.pcap
+*.apk
+.vscode/
+.idea/
