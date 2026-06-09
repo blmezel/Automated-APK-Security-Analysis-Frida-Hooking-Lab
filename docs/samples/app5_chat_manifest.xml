@@ -1,0 +1,1 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.chat.secure"><application android:allowBackup="false" android:debuggable="false"></application></manifest>

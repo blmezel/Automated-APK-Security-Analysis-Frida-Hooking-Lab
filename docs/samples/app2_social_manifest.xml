@@ -1,0 +1,1 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.social.app"><application android:usesCleartextTraffic="true"><receiver android:name=".SmsReceiver" android:exported="true"/></application></manifest>

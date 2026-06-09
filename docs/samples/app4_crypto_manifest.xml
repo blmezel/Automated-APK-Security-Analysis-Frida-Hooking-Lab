@@ -1,0 +1,1 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.crypto.wallet"><application><provider android:name=".KeysProvider" android:exported="true" /></application></manifest>
