@@ -16,14 +16,6 @@
 
 
 
-  # APK Security Lab - Advanced Reverse Engineering Framework
-
-  ![GitHub](https://img.shields.io/badge/GitHub-Private-red?style=flat-square&logo=github)
-  ![Dil](https://img.shields.io/badge/Dil-Rust%7CPython%7CGo-blue?style=flat-square)
-  ![Durum](https://img.shields.io/badge/Durum-Devam%20Ediyor-yellow?style=flat-square)
-  ![Ders](https://img.shields.io/badge/Ders-BGT210-purple?style=flat-square)
-</div>
-
 ---
 
 ## 1. Projenin Amacı / Project Purpose
