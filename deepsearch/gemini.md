@@ -1,0 +1,1 @@
+# Gemini Deepsearch Araştırma Sonuçları
