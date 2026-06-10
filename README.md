@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://istinye.edu.tr">
-   <img width="320" height="320" alt="istinye-universitesi-logo-png_seeklogo-610039" src="https://github.com/user-attachments/assets/7be1d44d-0ec2-4315-96c2-04e56145a53c" />
+   <img width="320" height="200" alt="istinye-universitesi-logo-png_seeklogo-610039" src="https://github.com/user-attachments/assets/7be1d44d-0ec2-4315-96c2-04e56145a53c" />
   </a>
 
   # Automated APK Security Analysis & Frida Hooking Lab
