@@ -122,3 +122,32 @@ Proje kapsamında geliştirilen ve teslim aşamasına getirilen operasyonel çı
 Projenin operasyonel çıktılarını, otomatize analiz süreçlerini ve Frida hooking laboratuvar bulgularını daha geniş bir kitleye interaktif olarak sunmak amacıyla bağımsız bir web sitesi devreye alınmıştır. Hocamızın ve inceleyicilerin projeyi web arayüzü üzerinden grafiksel olarak da takip edebilmesi için hazırlanan platforma aşağıdaki bağlantıdan canlı olarak erişilebilir:
 
 👉 [Automated APK Security Analysis & Frida Hooking Lab](https://blmezel.github.io/Automated-APK-Security-Analysis-Frida-Hooking-Lab/)
+
+```
+graph TD
+    %% Özel CSS Tasarım Tanımlamaları
+    classDef mainHeader fill:#f472b6,stroke:#4c0519,stroke-width:4px,color:#fff,font-weight:bold,rx:8px,ry:8px;
+    classDef subFolder fill:#e0e7ff,stroke:#4338ca,stroke-width:2px,color:#1e1b4b,font-weight:bold,rx:5px,ry:5px;
+    classDef fileNode fill:#f8fafc,stroke:#64748b,stroke-width:1.5px,color:#334155,rx:4px,ry:4px;
+    classDef criticalFile fill:#fee2e2,stroke:#991b1b,stroke-width:2px,color:#7f1d1d,font-weight:bold,rx:6px,ry:6px;
+
+    %% Diyagram Bağlantıları
+    Root[📦 APK Security Lab Workspace]:::mainHeader
+    
+    Root --> Docs[📂 docs / Belgeler]:::subFolder
+    Root --> Src[📂 src / Kaynak Kodlar]:::subFolder
+    Root --> Pipelines[⚙️ Otomasyon & Config]:::subFolder
+
+    Docs --> Modules[📂 modules / Modüller]:::subFolder
+    Docs --> Research[📂 research / Derin Analizler]:::subFolder
+    Docs --> References[📂 references / Kaynaklar]:::subFolder
+
+    Research --> AG[📄 docs/research/antigravity.md]:::criticalFile
+    Research --> DS[📄 docs/research/deepseek.md]:::fileNode
+    Research --> GM[📄 docs/research/gemini.md]:::fileNode
+
+    Pipelines --> DF[🐳 Dockerfile]:::fileNode
+    Pipelines --> DC[🐳 docker-compose.yml]:::fileNode
+    Pipelines --> ENV[🔒 .env.example]:::criticalFile
+    Pipelines --> RM[🗺️ ROADMAP.md]:::criticalFile
+```
