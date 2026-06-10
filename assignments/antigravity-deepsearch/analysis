@@ -1,0 +1,17 @@
+graph TD
+    %% Özel CSS Tasarım Tanımlamaları
+    classDef startNode fill:#fef08a,stroke:#a16207,stroke-width:3px,color:#713f12,font-weight:bold,rx:15px,ry:15px;
+    classDef processNode fill:#e0f2fe,stroke:#0369a1,stroke-width:2px,color:#0c4a6e,font-weight:bold,rx:5px,ry:5px;
+    classDef alertNode fill:#fee2e2,stroke:#b91c1c,stroke-width:3px,color:#7f1d1d,font-weight:bold,rx:6px,ry:6px;
+    classDef secureNode fill:#dcfce7,stroke:#15803d,stroke-width:3px,color:#14532d,font-weight:bold,rx:8px,ry:8px;
+
+    %% Diyagram Bağlantıları
+    Source((🌐 Untrusted APK Source Input)):::startNode --> Obfuscation{🌀 Control Flow <br> Flattening Detected}:::processNode
+    
+    Obfuscation -->|De-obfuscation Engine| AntiDebug[🛡️ Anti-Debugging & <br> ptrace Watchdog Isolation]:::processNode
+    AntiDebug --> TaintAnalysis[⚙️ Antigravity Deepsearch <br> Semantik Taint Tracking]:::processNode
+    
+    TaintAnalysis --> LogicBomb{💣 Time/Epoch Based <br> Logic Bomb Trigger?}:::alertNode
+    
+    LogicBomb -->|Isolated & Neutered| Sink[[🚨 Dynamic Native Sink <br> malloc / system / popen]]:::alertNode
+    Sink -->|Mitigation Matrix Applied| Secure[🔒 Hardened Secure State <br> Argon2id & AES-256-GCM]:::secureNode
