@@ -116,3 +116,9 @@ Proje kapsamında geliştirilen ve teslim aşamasına getirilen operasyonel çı
 ├── .gitignore            # Git dışı bırakılacaklar listesi
 ├── ROADMAP.md            # Öğrenme ve araştırma yolculuğu dökümanı
 └── README.md             # Ana belgeleme dökümanı
+
+## 🌐 Canlı Yayın ve Web Platformu / Live Demonstration
+
+Projenin operasyonel çıktılarını, otomatize analiz süreçlerini ve Frida hooking laboratuvar bulgularını daha geniş bir kitleye interaktif olarak sunmak amacıyla bağımsız bir web sitesi devreye alınmıştır. Hocamızın ve inceleyicilerin projeyi web arayüzü üzerinden grafiksel olarak da takip edebilmesi için hazırlanan platforma aşağıdaki bağlantıdan canlı olarak erişilebilir:
+
+👉 [Automated APK Security Analysis & Frida Hooking Lab](https://blmezel.github.io/Automated-APK-Security-Analysis-Frida-Hooking-Lab/)
