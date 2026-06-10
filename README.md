@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://istinye.edu.tr">
-    <img src="https://www.istinye.edu.tr/sites/default/files/isu_logo.png" alt="Istinye University" width="180"/>
+   <img width="320" height="320" alt="istinye-universitesi-logo-png_seeklogo-610039" src="https://github.com/user-attachments/assets/7be1d44d-0ec2-4315-96c2-04e56145a53c" />
   </a>
 
   # Automated APK Security Analysis & Frida Hooking Lab
@@ -14,60 +14,4 @@
 
 ---
 
-## 👨‍🏫 Instructor / Danışman
-
-| | |
-|---|---|
-| **Name / Ad** | Keyvan Arasteh |
-| **GitHub** | [@keyvanarasteh](https://github.com/keyvanarasteh) |
-| **Email** | [keyvan.arasteh@istinye.edu.tr](mailto:keyvan.arasteh@istinye.edu.tr) |
-| **LinkedIn** | [keyvanarasteh](https://www.linkedin.com/in/keyvanarasteh/) |
-| **Website** | [qline.tech](https://qline.tech) |
-
----
-
-## 👤 Student / Öğrenci
-
-| | |
-|---|---|
-| **Name / Ad Soyad** | Ezel Balım Atik |
-| **Student ID / Öğrenci No** | `2100****0123` |
-
----
-
-## 📚 Course Information / Ders Bilgileri
-
-| | |
-|---|---|
-| **Course Name / Ders Adı** | Reverse Engineering / Tersine Mühendislik |
-| **Course Code / Ders Kodu** | BGT210 |
-| **Credits / Kredi** | 3 ECTS |
-| **Semester / Dönem** | 2025-2026 Spring / 2025-2026 Bahar |
-| **Institution / Üniversite** | [Istinye University](https://istinye.edu.tr) |
-
----
-
-## 📋 Project Overview / Proje Özeti
-
-Bu proje, modern Android uygulamaları için tasarlanmış otomatik bir tersine mühendislik mekanizması sunar. Kaynak kod bileşenlerini ve manifest düzeyindeki açıklıkları çıkarmak için dekompilasyon süreçlerini otomatikleştirir ve Frida entegrasyonuyla çalışma zamanı müdahalelerini yönetir.
-
-This project implements an automated reverse engineering pipeline designed for modern Android applications. It automates static file analysis via decompilation methods to extract source artifacts and manifest level exposure points while managing programmatic environment hooks with Frida.
-
----
-
-## 🗂️ Repository Structure / Repo Yapısı
-
-```text
-.
-├── README.md
-├── ROADMAP.md
-├── Dockerfile
-├── docker-compose.yml
-├── .env.example
-├── .gitignore
-├── docs/
-│   ├── modules/
-│   ├── research/
-│   └── references/
-└── src/
 
