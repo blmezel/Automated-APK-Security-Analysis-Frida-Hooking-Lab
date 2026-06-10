@@ -49,7 +49,7 @@ Bu projenin temel amacı; Android uygulama (APK) ekosistemindeki statik/dinamik 
 | :--- | :--- |
 | **Ders Adı** | Tersine Mühendislik |
 | **Ders Kodu** | BGT210 |
-| **Kredi** | 3 AKTS |
+| **Kredi** | 5 AKTS |
 | **Ön Koşullar** | Ağ Temelleri, Linux CLI |
 | **Dönem** | 2025-2026 Bahar |
 
