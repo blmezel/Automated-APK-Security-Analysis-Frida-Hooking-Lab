@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureSphere | Advanced RE & Security Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0f',
+                        darker: '#050508',
+                        card: '#13131f',
+                        primary: '#a855f7',
+                        secondary: '#4ade80',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.4.0/dist/mermaid.min.js"></script>
+    <style>
+        body { background-color: #050508; color: #e2e8f0; font-family: 'Inter', system-ui, sans-serif; }
+        .glass-card { background: #13131f; border: 1px solid #2a2a3f; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); }
+        .neon-border-purple { border-left: 4px solid #a855f7; }
+        .neon-border-green { border-left: 4px solid #4ade80; }
+        .tab-btn.active { border-bottom: 2px solid #a855f7; color: #a855f7; background: rgba(168, 85, 247, 0.05); }
+        .tab-btn { transition: all 0.3s ease; }
+        .tab-btn:hover { color: #4ade80; }
+        .mermaid { background: transparent !important; display: flex; justify-content: center; }
+        .typing-effect { overflow: hidden; white-space: nowrap; border-right: 2px solid #4ade80; animation: typing 3s steps(40, end), blink-caret .75s step-end infinite; }
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #4ade80; } }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col md:flex-row">
+
+    <aside class="w-full md:w-72 glass-card md:h-screen sticky top-0 flex flex-col z-20">
+        <div class="p-8 border-b border-gray-800 text-center w-full">
+            <i class="fa-solid fa-shield-halved text-5xl text-primary mb-3"></i>
+            <h1 class="text-2xl font-bold tracking-widest text-white">Secure<span class="text-secondary">Sphere</span></h1>
+            <p class="text-xs text-gray-400 mt-2 tracking-wide font-mono">Advanced RE & DevSecOps Lab</p>
+        </div>
+        <nav id="nav-menu" class="flex flex-col p-4 space-y-2">
+            <button onclick="switchTab('dashboard')" class="tab-btn active w-full flex items-center p-3 rounded-lg text-left font-medium">
+                <i class="fa-solid fa-chart-network w-8 text-center mr-2"></i> Mimari & Özet
+            </button>
+            <button onclick="switchTab('roadmap')" class="tab-btn w-full flex items-center p-3 rounded-lg text-left text-gray-400 font-medium">
+                <i class="fa-solid fa-map-location-dot w-8 text-center mr-2"></i> Amaç & Yol Haritası
+            </button>
+            <button onclick="switchTab('modules')" class="tab-btn w-full flex items-center p-3 rounded-lg text-left text-gray-400 font-medium">
+                <i class="fa-solid fa-microchip w-8 text-center mr-2"></i> Güvenlik Modülleri
+            </button>
+            <button onclick="switchTab('vize')" class="tab-btn w-full flex items-center p-3 rounded-lg text-left text-gray-400 font-medium">
+                <i class="fa-solid fa-building-shield w-8 text-center mr-2"></i> Vize Entegrasyonu
+            </button>
+            <button onclick="switchTab('about')" class="tab-btn w-full flex items-center p-3 rounded-lg text-left text-gray-400 font-medium">
+                <i class="fa-solid fa-user-astronaut w-8 text-center mr-2"></i> Hakkında & Araçlar
+            </button>
+        </nav>
+    </aside>
+
+    <main class="flex-1 p-6 md:p-10 overflow-y-auto relative">
+        <!-- MIMARI -->
+        <section id="dashboard" class="tab-content block">
+            <header class="mb-8 border-b border-gray-800 pb-4">
+                <h2 class="text-4xl font-bold text-white">Proje Mimarisi</h2>
+                <p class="text-gray-400 mt-2">Geliştirilen otomatik APK analiz ve dinamik manipülasyon boru hattının yapısal diyagramı.</p>
+            </header>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="glass-card p-6 rounded-xl text-center neon-border-purple">
+                    <i class="fa-solid fa-microscope text-3xl text-primary mb-3"></i>
+                    <h3 class="text-3xl font-bold text-white font-mono">4+</h3>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Modül</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center neon-border-green">
+                    <i class="fa-solid fa-shield-cat text-3xl text-secondary mb-3"></i>
+                    <h3 class="text-3xl font-bold text-white font-mono">%100</h3>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Uyum Skoru</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center neon-border-purple">
+                    <i class="fa-solid fa-microchip text-3xl text-primary mb-3"></i>
+                    <h3 class="text-3xl font-bold text-white font-mono">x86_64</h3>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Capstone</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center neon-border-green">
+                    <i class="fa-solid fa-gauge-high text-3xl text-secondary mb-3"></i>
+                    <h3 class="text-3xl font-bold text-white font-mono">0-100</h3>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest mt-1">Risk Motoru</p>
+                </div>
+            </div>
+            <div class="glass-card rounded-xl p-6 mb-8 overflow-x-auto">
+                <div class="mermaid text-center">
+                    graph TD
+                    classDef purple fill:#2a1045,stroke:#a855f7,stroke-width:2px,color:#fff;
+                    classDef green fill:#0d2e1b,stroke:#4ade80,stroke-width:2px,color:#fff;
+                    classDef dark fill:#13131f,stroke:#3f3f5a,stroke-width:1px,color:#ccc;
+                    A[Hedef Binary / APK]:::dark --> B{Analiz Katmanı}:::dark
+                    B -->|Statik & AST| C[Manifest & Secrets Tarayıcı]:::purple
+                    C --> E[Risk Skoru CLI]:::purple
+                    B -->|Dinamik Hooking| D[Frida Runtime Manager]:::green
+                    D --> F[TrustManager Bypass]:::green
+                    D --> G[Root File Subsystem Hook]:::green
+                    B -->|Low-Level Vize| H[Vaultwarden Disassembler]:::purple
+                    H --> I[Hex to x86_64 ASM]:::purple
+                    H --> J[SQLite Forensic WAL Scan]:::purple
+                </div>
+            </div>
+        </section>
+
+        <!-- ROADMAP -->
+        <section id="roadmap" class="tab-content hidden">
+            <header class="mb-8 border-b border-gray-800 pb-4">
+                <h2 class="text-4xl font-bold text-white">Amaç & Yol Haritası</h2>
+                <p class="text-gray-400 mt-2">Laboratuvar ortamında yürütülen tersine mühendislik süreçlerinin zaman tüneli.</p>
+            </header>
+            <div class="glass-card p-6 rounded-xl mb-6">
+                <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-bullseye text-primary mr-2"></i> Projenin Temel Amacı</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Bu projenin ana amacı, Android ekosistemindeki zafiyet barındıran uygulamaların hem kaynak kod seviyesinde (Statik) hem de bellek katmanında (Dinamik) güvenlik denetimlerini otomatize etmektir. "Önce anla, sonra güvenli kodla" felsefesini benimseyerek, potansiyel saldırı yüzeylerini minimuma indirmek hedeflenmiştir.
+                </p>
+            </div>
+            <div class="glass-card rounded-xl p-6 overflow-x-auto">
+                <div class="mermaid">
+                    gantt
+                    title Proje Geliştirme Yol Haritası
+                    dateFormat  YYYY-MM-DD
+                    axisFormat  %d-%m
+                    section Statik Analiz
+                    Manifest & AST Algoritmaları    :active, st1, 2026-06-01, 3d
+                    Regex Secret Hunter Tasarımı   :st2, after st1, 2d
+                    section Dinamik Hooking
+                    Frida Runtime Ortamı Kurulumu  :di1, 2026-06-04, 2d
+                    SSL Pinning & Root Bypass     :di2, after di1, 3d
+                    section Vize Entegrasyonu
+                    Capstone x86_64 ASM Bağlantısı :vi1, 2026-06-08, 2d
+                    SQLite Forensic Analizleri    :vi2, after vi1, 2d
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULES -->
+        <section id="modules" class="tab-content hidden">
+            <header class="mb-8 border-b border-gray-800 pb-4">
+                <h2 class="text-4xl font-bold text-white">Güvenlik Modülleri</h2>
+            </header>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="glass-card p-6 rounded-xl relative overflow-hidden group">
+                    <h3 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-file-shield text-primary mr-2"></i> CLI Güvenlik & Risk Motoru</h3>
+                    <p class="text-gray-400 text-sm">Hedef APK'nın Manifest dosyasını AST seviyesinde ayrıştırır, zafiyetli bileşenlere göre 0-100 arası matematiksel Risk Skoru üretir.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl relative overflow-hidden group">
+                    <h3 class="text-2xl font-bold text-white mb-2"><i class="fa-solid fa-microchip text-secondary mr-2"></i> Runtime Memory Hooking</h3>
+                    <p class="text-gray-400 text-sm">Uygulamanın JVM/Dalvik belleğine enjekte edilen JavaScript payload'ları ile SSL Pinning ve Root tespiti duvarlarını aşar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIZE -->
+        <section id="vize" class="tab-content hidden">
+            <header class="mb-8 border-b border-gray-800 pb-4">
+                <h2 class="text-4xl font-bold text-white">Vaultwarden Vize Entegrasyonu</h2>
+            </header>
+            <div class="glass-card p-8 rounded-xl neon-border-purple mb-8">
+                <h3 class="text-3xl font-bold text-white mb-4"><i class="fa-solid fa-gear text-primary mr-2"></i> Capstone Engine (x86_64) Disassembler</h3>
+                <p class="text-gray-300 leading-relaxed mb-6">
+                    Vize projesinin Capstone Motoru, <code>src/vize_disassembler.py</code> modülü olarak entegre edildi. Native NDK <code>*.so</code> dosyalarındaki Hex/Opcode bayt dizilimlerini doğrudan Assembly diline geri çevirir.
+                </p>
+                <div class="bg-[#050508] p-4 rounded-lg font-mono text-sm border border-gray-800">
+                    <p class="text-blue-400">> Input Hex: b834120000904883ec08</p>
+                    <p class="text-yellow-400">0x1000: mov eax, 0x1234</p>
+                    <p class="text-yellow-400">0x1005: nop</p>
+                    <p class="text-yellow-400">0x1006: sub rsp, 8</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="tab-content hidden">
+            <header class="mb-8 border-b border-gray-800 pb-4">
+                <h2 class="text-4xl font-bold text-white">Hakkında & Araçlar</h2>
+            </header>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="glass-card p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-white mb-2">Ezel Balım Atik</h3>
+                    <a href="https://github.com/blmezel" target="_blank" class="text-primary font-mono text-sm block mb-4"><i class="fa-brands fa-github mr-1"></i> @blmezel</a>
+                    <p class="text-gray-400 text-sm leading-relaxed">Siber Güvenlik, Tersine Mühendislik ve DevSecOps mimarileri üzerine uzmanlaşan sistem analisti.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl border-l-4 border-secondary">
+                    <h3 class="text-2xl font-bold text-white mb-2">Keyvan Arasteh</h3>
+                    <span class="text-secondary font-mono text-sm block mb-4">Akademik Eğitmen</span>
+                    <p class="text-gray-400 text-sm leading-relaxed">Projenin baştan sona endüstriyel DevSecOps standartlarında gelişmesini sağlayan, teknik derinlik vizyonunu çizen değerli eğitmenimiz.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => { el.classList.remove('block'); el.classList.add('hidden'); });
+            const target = document.getElementById(tabId);
+            if(target) { target.classList.remove('hidden'); target.classList.add('block'); }
+            document.querySelectorAll('.tab-btn').forEach(btn => { btn.classList.remove('active', 'text-primary'); btn.classList.add('text-gray-400'); btn.style.background = 'transparent'; });
+            event.currentTarget.classList.remove('text-gray-400');
+            event.currentTarget.classList.add('active', 'text-primary');
+            event.currentTarget.style.background = 'rgba(168, 85, 247, 0.05)';
+        }
+        mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    </script>
+</body>
+</html>
